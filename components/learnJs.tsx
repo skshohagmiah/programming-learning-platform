@@ -3,14 +3,14 @@ import React from "react";
 
 const LearnJs = () => {
   return (
-    <section className="py-12 md:py-20 bg-gray-100 dark:bg-gray-800">
+    <section className="py-12 md:py-20 bg-green-50 dark:bg-gray-800">
       <div className=" mx-auto px-4 max-w-7xl">
         <div className="flex justify-between flex-col-reverse md:flex-row gap-8 items-center">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left px-4 md:px-0 md:basis-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
-              Why JavaScript?
+              Why Learn JavaScript?
             </h2>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-3">
+            <ul className="list-disc list-outside text-gray-600 dark:text-gray-300 space-y-3">
               <li>
                 <span className="text-lg  font-semibold">The Language of the Web:</span> JavaScript is essential for
                 creating interactive websites, web applications, and dynamic
@@ -32,7 +32,7 @@ const LearnJs = () => {
               </li>
             </ul>
           </div>
-          <div className="relative w-full h-[300px] md:w-[400px] md:h-[400px] md:ml-12">
+          <div className="relative w-full h-[300px] md:w-[400px] md:h-[400px] md:ml-12 md:basis-1/2">
             <Image
               src="/js.png" // Replace with relevant image
               alt="JavaScript Illustration"

@@ -11,12 +11,12 @@ import {
 import { Button } from "@/components/ui/button";
 import LessonProgressBar from "@/components/LessonProgressBar";
 import Editor from "@monaco-editor/react";
-import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Info } from "lucide-react";
 import LessonNavigationButtons from "@/components/LessonNavigationButtons";
 import { editor } from "monaco-editor";
+import { useTheme } from "next-themes";
 
 export default function VariableLesson() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -28,7 +28,8 @@ export default function VariableLesson() {
   const [codeOutput, setCodeOutput] = useState<string | null>(null);
   const [executionError, setExecutionError] = useState<string | null>(null);
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  const theme = useTheme()
 
  
   useEffect(() => {
@@ -118,8 +119,8 @@ export default function VariableLesson() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-12">
-      <Card className="max-w-[1000px] w-full p-6 shadow-md rounded-md bg-slate-50 dark:bg-slate-900">
+    <main className="flex min-h-screen flex-col items-center justify-center p-2 md:p-12">
+      <Card className="max-w-[1000px] w-full p-2 md:p-6 shadow-md rounded-md bg-slate-50 dark:bg-slate-900">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">
             JavaScript Variables
@@ -147,7 +148,7 @@ export default function VariableLesson() {
               <div className="my-4 !bg-transparent">
                 <Editor
                   height="50px" // Adjust height as needed
-                  theme="vs-dark"
+                  theme={theme.theme === 'dark' ? 'vs-dark' : 'light'}
                   defaultLanguage="javascript"
                   value="let variableName;"
                   options={{ readOnly: true, fontSize: 22 }}
@@ -170,8 +171,7 @@ export default function VariableLesson() {
               <Editor
                 height="120px" // Adjust height as needed
                 defaultLanguage="javascript"
-                // line={2}
-                theme="vs-dark"
+                theme={theme.theme === 'dark' ? 'vs-dark' : 'light'}
                 value={`
                 let message = 'Hello, world!';
                 let age = 30;
@@ -225,7 +225,7 @@ export default function VariableLesson() {
               <Editor
                 height="100px" // Adjust height as needed
                 defaultLanguage="javascript"
-                theme="vs-dark"
+                theme={theme.theme === 'dark' ? 'vs-dark' : 'light'}
                 value={`
                   let counter = 0;
                   counter = counter + 1; // Increment the counter
@@ -270,7 +270,7 @@ export default function VariableLesson() {
               </p>
               <Editor
                 height="200px"
-                theme="vs-dark"
+                theme={theme.theme === 'dark' ? 'vs-dark' : 'light'}
                 defaultLanguage="javascript"
                 defaultValue="// Declare and assign a value to a variable"
                 onChange={handleEditorChange}

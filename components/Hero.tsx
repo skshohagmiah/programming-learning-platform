@@ -74,9 +74,9 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="py-10 md:py-20 ">
+    <section className="py-20 ">
       <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 items-center justify-between text-center md:text-left">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-between text-center md:text-left">
           {/* Text Content */}
           <motion.div
             className="md:w-1/2 w-full mb-10 md:mb-0"
@@ -94,8 +94,7 @@ export default function HeroSection() {
               <span className="text-green-500 font-semibold text-2xl capitalize">
                 interactive JavaScript and Python course.
               </span>{" "}
-              Build real-world projects, solve challenges, and join a vibrant
-              community of learners.
+              Build real-world projects, solve challenges, and get everything for free.
             </p>
 
             <motion.div
@@ -105,14 +104,14 @@ export default function HeroSection() {
               className="flex flex-col md:flex-row gap-4 justify-center w-full md:justify-start md:space-x-4"
             >
               <Link href="/js" >
-                <Button className="bg-green-600 text-white hover:bg-green-700 px-8 py-6 rounded-full text-lg font-semibold w-full">
+                <Button className="bg-green-600 text-white hover:bg-green-700 px-8 py-6 rounded-full text-lg font-semibold w-full border-b-4">
                   Start Learning
                 </Button>
               </Link>
               <Link href="/lessons" >
                 <Button
                   variant="outline"
-                  className=" px-8 py-6 rounded-full text-lg font-semibold w-full"
+                  className=" px-8 py-6 rounded-full text-lg font-semibold w-full border-b-4"
                 >
                   Explore Courses
                 </Button>

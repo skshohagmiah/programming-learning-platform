@@ -14,9 +14,9 @@ const LearnPython = () => {
           fill
         />
       </div>
-      <div className="text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Why Python?</h2>
-        <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-3">
+      <div className="text-center md:text-left px-4 md:px-0">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Why Learn Python?</h2>
+        <ul className="list-disc list-outside text-gray-600 dark:text-gray-300 space-y-3">
           <li>
             <span className="text-lg font-semibold">Beginner-Friendly:</span> Python&apos;s clear and readable syntax makes it an excellent language for beginners to learn programming concepts.
           </li>

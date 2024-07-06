@@ -24,7 +24,7 @@ const dummyBlogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="py-16  bg-slate-100 dark:bg-slate-900">
+    <section className="py-16  bg-blue-50 dark:bg-slate-900">
     <div className="container mx-auto px-4 max-w-7xl">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
         Insights and Inspiration from Our Blog
