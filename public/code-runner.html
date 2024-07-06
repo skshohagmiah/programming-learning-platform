@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.data.type === 'runCode') {
+        try {
+          eval(event.data.script);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    }, false);
+  </script>
+</body>
+</html>
